@@ -1,0 +1,13 @@
+#usda 1.0
+
+def Xform "LowerArm"
+{
+    float3 xformOp:scale = (0.3, 1.2, 0.3)
+    uniform token[] xformOpOrder = ["xformOp:scale"]
+
+    def Cube "Cube"
+    {
+        double size = 1
+    }
+}
+

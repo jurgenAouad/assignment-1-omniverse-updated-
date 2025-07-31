@@ -1,0 +1,37 @@
+#usda 1.0
+
+def Xform "Robot"
+{
+    def Xform "Base" (
+        prepend references = @C:/Users/test/Documents/Assignment1/usda/base.usda@</Base>
+    )
+    {
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:translate"]
+    }
+
+    def Xform "LowerArm" (
+        prepend references = @C:/Users/test/Documents/Assignment1/usda/lower_arm.usda@</LowerArm>
+    )
+    {
+        double3 xformOp:translate = (0, 0.6, 0)
+        uniform token[] xformOpOrder = ["xformOp:scale", "xformOp:translate"]
+    }
+
+    def Xform "UpperArm" (
+        prepend references = @C:/Users/test/Documents/Assignment1/usda/upper_arm.usda@</UpperArm>
+    )
+    {
+        double3 xformOp:translate = (-2.8, 1.1, 0)
+        uniform token[] xformOpOrder = ["xformOp:rotateXYZ", "xformOp:scale", "xformOp:translate"]
+    }
+
+    def Xform "Gripper" (
+        prepend references = @C:/Users/test/Documents/Assignment1/usda/gripper.usda@</Gripper>
+    )
+    {
+        double3 xformOp:translate = (0.9, 2.1, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+
